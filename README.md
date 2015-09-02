@@ -37,7 +37,14 @@ tell me everything
 >>> print firebase.get(URL + '/color')
 red
 
->>> #TODO: put in example of push
+>>> #Whereas using put replaces existing data, push simply appends to a list
+>>> firebase.push(URL+'/listexample',{'color':'red'})
+>>> firebase.get(URL+'/listexample')
+{'u'-JyAXHX9ZNBh7tPPja4w':{'color':'red'}}
+
+>>> firebase.push(URL+'/listexample',{'color':'green'})
+>>> firebase.get(URL+'/listexample')
+{'u'-JyAXHX9ZNBh7tPPja4w':{'color':'red'},'-JyAXHX9ZNBh7tPPjasd':{'color':'green'}}
 ```
 
 
