@@ -12,9 +12,9 @@ https://www.firebase.com/signup/
 
 
 
-##get and put
+##get, put and push
 
-`get` gets the value of a Firebase at some URL, and `put` sets the value of a Firebase at URL to some data.
+`get` gets the value of a Firebase at some URL, `put` writes or replaces data at the path defined by URL and `push` appends data to a list at the path defined by URL. A new ID is also generated every time you `push` to a Firebase URL.
 
 ```python
 >>> import firebase
@@ -36,6 +36,8 @@ tell me everything
 
 >>> print firebase.get(URL + '/color')
 red
+
+>>> #TODO: put in example of push
 ```
 
 
